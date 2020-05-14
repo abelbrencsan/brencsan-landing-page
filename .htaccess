@@ -1,0 +1,13 @@
+# Do not show directory indexes
+Options -Indexes
+
+# Follow symbolic links
+Options +FollowSymLinks
+
+# Force WWW
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Force HTTPS connection 
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

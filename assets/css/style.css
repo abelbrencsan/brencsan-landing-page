@@ -1,0 +1,289 @@
+/* Fonts */
+@font-face {
+	font-display:swap;
+	src:local("Source Code Pro"),local("SourceCodePro-Regular"),url("../fonts/source-code-pro/400.woff2") format("woff2"),url("../fonts/source-code-pro/400.woff") format("woff");
+	font-family:'Source Code Pro';
+	font-style:normal;
+	font-weight:400;
+}
+
+@font-face {
+	font-display:swap;
+	src:local("Quicksand"),local("Quicksand-Regular"),url("../fonts/quicksand/400.woff2") format("woff2"),url("../fonts/quicksand/400.woff") format("woff");
+	font-family:'Quicksand';
+	font-style:normal;
+	font-weight:400;
+}
+
+@font-face {
+	font-display: swap;
+	src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url('../fonts/source-sans-pro/400.woff2') format('woff2'), url('../fonts/source-sans-pro/400.woff') format('woff');
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-display: swap;
+	src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url('../fonts/source-sans-pro/400i.woff2') format('woff2'), url('../fonts/source-sans-pro/400i.woff') format('woff');
+	font-family: 'Source Sans Pro';
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-display: swap;
+	src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url('../fonts/source-sans-pro/700.woff2') format('woff2'), url('../fonts/source-sans-pro/700.woff') format('woff');
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-display: swap;
+	src: local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url('../fonts/source-sans-pro/700i.woff2') format('woff2'), url('../fonts/source-sans-pro/700i.woff') format('woff');
+	font-family: 'Source Sans Pro';
+	font-style: italic;
+	font-weight: 700;
+}
+
+/* Reset */
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	touch-action: manipulation;
+	box-sizing: border-box;
+}
+
+*, *:after, *:before {
+	box-sizing: inherit
+}
+
+body, form, fieldset, legend, input, select, textarea, button {
+	margin: 0;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+legend {
+	padding: 0;
+}
+
+input, textarea, button, select, label, a, div {
+	-webkit-tap-highlight-color: transparent;
+}
+
+input:invalid {
+	box-shadow: none;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner, input::-moz-focus-outer {
+	border: none;
+	outline: none;
+}
+
+/* Base styles */
+html {
+	font-size: 18px;
+}
+
+body {
+	background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+body, input, optgroup, select, textarea, button {
+	color: rgba(0,0,0,0.5);
+	font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: rgba(0,0,0,0.7);
+	margin: 0 0 0.5rem 0;
+	font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+h5 {
+	font-size: 1.2rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+p {
+	margin: 0 0 2.5rem 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgba(0,0,0,0.7);
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+em, i, var, dfn, cite {
+	font-style: italic;
+}
+
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	cursor: help;
+}
+
+small {
+	font-size: 0.8rem
+}
+
+hr {
+	margin: 0;
+	border: 0;
+	border-bottom: 1px solid #c7b5d9;
+}
+
+sub, sup {
+	position: relative;
+	font-size: 0.8rem;
+	vertical-align: middle;
+}
+
+sub {
+	top: 0.2rem;
+}
+
+sup {
+	top: -0.2rem;
+}
+
+pre, code, kbd, samp {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.5;
+}
+
+code, kbd {
+	padding: 0.25em 0.5em;
+	font-size: 0.8rem;
+}
+
+code {
+	background-color: rgba(0,0,0,0.05);
+	color: rgba(0,0,0,0.5);
+}
+
+kbd {
+	background-color: rgba(0,0,0,0.05);
+	color: rgba(0,0,0,0.5);
+}
+
+pre {
+	margin: 0 0 $element-margin 0;
+}
+
+pre > code {
+	display: block;
+	padding: $box-padding;
+	overflow-x: auto;
+}
+
+ul, ol {
+	margin: 0 0 2.5rem 0;
+	padding-left: 1.25rem;
+}
+
+ul li, ol li {
+	padding-left: 0.25rem;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+	margin-bottom: 0;
+}
+
+ul.actions {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin-left: -1rem;
+	padding-left: 0;
+}
+
+ul.actions > li {
+	padding-left: 1rem;
+}
+
+.icon {
+	fill: currentColor;
+	display: inline-block;
+	position: relative;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	transform: translateX(0);
+	line-height: 1;
+	pointer-events: none;
+	margin-top: -0.2em;
+	vertical-align: middle;
+	margin-right: 0.25em;
+}
+
+.hero {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.hero .content {
+	width: 90%;
+	max-width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+}
